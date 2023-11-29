@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
-    'Presprog\\KirbyLogger\\' => array($baseDir . '/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Kirby\\' => array($vendorDir . '/getkirby/composer-installer/src'),
 );

@@ -10,11 +10,14 @@ class ComposerStaticInit91915564c3fbcbfcb111711a7d491544
         'P' => 
         array (
             'Psr\\Log\\' => 8,
-            'Presprog\\KirbyLogger\\' => 21,
         ),
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'K' => 
+        array (
+            'Kirby\\' => 6,
         ),
     );
 
@@ -23,13 +26,13 @@ class ComposerStaticInit91915564c3fbcbfcb111711a7d491544
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'Presprog\\KirbyLogger\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Kirby\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
         ),
     );
 

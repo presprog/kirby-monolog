@@ -3,7 +3,8 @@
   "description": "This plugin integrates the Monolog logger library with Kirby CMS",
   "type": "kirby-plugin",
   "require": {
-    "monolog/monolog": "^3.3"
+    "monolog/monolog": "^3.3",
+    "getkirby/composer-installer": "^1.2"
   },
   "license": "MIT",
   "authors": [
@@ -11,5 +12,10 @@
       "name": "Benedict Massolle",
       "email": "bm@presentprogressive.de"
     }
-  ]
+  ],
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  }
 }

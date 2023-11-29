@@ -1,0 +1,15 @@
+{
+  "name": "presprog/kirby-logger",
+  "description": "This plugin integrates the Monolog logger library with Kirby CMS",
+  "type": "kirby-plugin",
+  "require": {
+    "monolog/monolog": "^3.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benedict Massolle",
+      "email": "bm@presentprogressive.de"
+    }
+  ]
+}

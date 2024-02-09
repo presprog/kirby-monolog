@@ -3,7 +3,7 @@
         'name' => 'presprog/kirby-logger',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1959f24f3e7eeca5833cd5ee959581cbdfa10216',
+        'reference' => '47f5ab0d1e991cd67a1f94d1831085910ec7300b',
         'type' => 'kirby-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'presprog/kirby-logger' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1959f24f3e7eeca5833cd5ee959581cbdfa10216',
+            'reference' => '47f5ab0d1e991cd67a1f94d1831085910ec7300b',
             'type' => 'kirby-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

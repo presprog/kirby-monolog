@@ -9,28 +9,32 @@ use Psr\Log\LogLevel;
 
 function monolog(string $name = null): Logger
 {
-    return kirby()->option('presprog.logger.default')($name);
+    return option('presprog.logger.default.channel')($name);
 }
 
 App::plugin('presprog/logger', [
     'options' => [
-        'name' => 'kirby.log',
-        'default_log_level' => LogLevel::ERROR,
-        'default' => function (string $name = null) {
-            if ($name === null) {
-                $name = option('presprog.logger.name', 'kirby.log');
-            }
+        'default' => [
+            'name' => 'kirby',
+            'maxFiles' => 14,
+            'level' => LogLevel::DEBUG,
+            'dir' => function () {
+                return kirby()->root('logs') ?? kirby()->root('site') . '/logs';
+            },
+            'channel' => function (string $name = null) {
+                $name     ??= option('presprog.logger.default.name');
+                $path     = option('presprog.logger.default.dir')();
+                $filename = $path . DIRECTORY_SEPARATOR . $name . '.log';
 
-            $path = kirby()->root('logs');
-
-            if ($path === null) {
-                $path = kirby()->root('site') . '/logs';
-            }
-
-            return new Logger($path . DIRECTORY_SEPARATOR . $name, [
-                new RotatingFileHandler($name),
-            ]);
-        },
+                return new Logger($name, [
+                    new RotatingFileHandler(
+                        $filename,
+                        option('presprog.logger.default.maxFiles'),
+                        option('presprog.logger.default.level'),
+                    ),
+                ]);
+            },
+        ],
     ],
 
     'siteMethods' => [
@@ -38,7 +42,7 @@ App::plugin('presprog/logger', [
             $logger = monolog($name);
 
             if (null === $level) {
-                $level = option('presprog.logger.default_log_level');
+                $level = option('presprog.logger.default.level');
             }
 
             $logger->log($level, $message, $context);

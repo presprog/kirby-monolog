@@ -9,10 +9,10 @@ use Psr\Log\LogLevel;
 
 function monolog(string $name = null): Logger
 {
-    return option('presprog.logger.default.channel')($name);
+    return option('presprog.monolog.default.channel')($name);
 }
 
-App::plugin('presprog/logger', [
+App::plugin('presprog/monolog', [
     'options' => [
         'default' => [
             'name' => 'kirby',
@@ -22,15 +22,15 @@ App::plugin('presprog/logger', [
                 return kirby()->root('logs') ?? kirby()->root('site') . '/logs';
             },
             'channel' => function (string $name = null) {
-                $name     ??= option('presprog.logger.default.name');
-                $path     = option('presprog.logger.default.dir')();
+                $name     ??= option('presprog.monolog.default.name');
+                $path     = option('presprog.monolog.default.dir')();
                 $filename = $path . DIRECTORY_SEPARATOR . $name . '.log';
 
                 return new Logger($name, [
                     new RotatingFileHandler(
                         $filename,
-                        option('presprog.logger.default.maxFiles'),
-                        option('presprog.logger.default.level'),
+                        option('presprog.monolog.default.maxFiles'),
+                        option('presprog.monolog.default.level'),
                     ),
                 ]);
             },
@@ -42,7 +42,7 @@ App::plugin('presprog/logger', [
             $logger = monolog($name);
 
             if (null === $level) {
-                $level = option('presprog.logger.default.level');
+                $level = option('presprog.monolog.default.level');
             }
 
             $logger->log($level, $message, $context);

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit40a33afd2a14cb670fded278e623ffb4
+class ComposerStaticInitbffb7ae23f60453363c05a4c795362b4
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -18,6 +18,19 @@ class ComposerStaticInit40a33afd2a14cb670fded278e623ffb4
         'K' => 
         array (
             'Kirby\\' => 6,
+        ),
+        'J' => 
+        array (
+            'JsonSchema\\' => 11,
+        ),
+        'E' => 
+        array (
+            'Ergebnis\\Json\\SchemaValidator\\' => 30,
+            'Ergebnis\\Json\\Printer\\' => 22,
+            'Ergebnis\\Json\\Pointer\\' => 22,
+            'Ergebnis\\Json\\Normalizer\\' => 25,
+            'Ergebnis\\Json\\' => 14,
+            'Ergebnis\\Composer\\Normalize\\' => 28,
         ),
     );
 
@@ -34,18 +47,62 @@ class ComposerStaticInit40a33afd2a14cb670fded278e623ffb4
         array (
             0 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
         ),
+        'JsonSchema\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+        ),
+        'Ergebnis\\Json\\SchemaValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/json-schema-validator/src',
+        ),
+        'Ergebnis\\Json\\Printer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/json-printer/src',
+        ),
+        'Ergebnis\\Json\\Pointer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/json-pointer/src',
+        ),
+        'Ergebnis\\Json\\Normalizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/json-normalizer/src',
+        ),
+        'Ergebnis\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/json/src',
+        ),
+        'Ergebnis\\Composer\\Normalize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ergebnis/composer-normalize/src',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Localheinz\\Diff\\Chunk' => __DIR__ . '/..' . '/localheinz/diff/src/Chunk.php',
+        'Localheinz\\Diff\\ConfigurationException' => __DIR__ . '/..' . '/localheinz/diff/src/Exception/ConfigurationException.php',
+        'Localheinz\\Diff\\Diff' => __DIR__ . '/..' . '/localheinz/diff/src/Diff.php',
+        'Localheinz\\Diff\\Differ' => __DIR__ . '/..' . '/localheinz/diff/src/Differ.php',
+        'Localheinz\\Diff\\Exception' => __DIR__ . '/..' . '/localheinz/diff/src/Exception/Exception.php',
+        'Localheinz\\Diff\\InvalidArgumentException' => __DIR__ . '/..' . '/localheinz/diff/src/Exception/InvalidArgumentException.php',
+        'Localheinz\\Diff\\Line' => __DIR__ . '/..' . '/localheinz/diff/src/Line.php',
+        'Localheinz\\Diff\\LongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/localheinz/diff/src/LongestCommonSubsequenceCalculator.php',
+        'Localheinz\\Diff\\MemoryEfficientLongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/localheinz/diff/src/MemoryEfficientLongestCommonSubsequenceCalculator.php',
+        'Localheinz\\Diff\\Output\\AbstractChunkOutputBuilder' => __DIR__ . '/..' . '/localheinz/diff/src/Output/AbstractChunkOutputBuilder.php',
+        'Localheinz\\Diff\\Output\\DiffOnlyOutputBuilder' => __DIR__ . '/..' . '/localheinz/diff/src/Output/DiffOnlyOutputBuilder.php',
+        'Localheinz\\Diff\\Output\\DiffOutputBuilderInterface' => __DIR__ . '/..' . '/localheinz/diff/src/Output/DiffOutputBuilderInterface.php',
+        'Localheinz\\Diff\\Output\\StrictUnifiedDiffOutputBuilder' => __DIR__ . '/..' . '/localheinz/diff/src/Output/StrictUnifiedDiffOutputBuilder.php',
+        'Localheinz\\Diff\\Output\\UnifiedDiffOutputBuilder' => __DIR__ . '/..' . '/localheinz/diff/src/Output/UnifiedDiffOutputBuilder.php',
+        'Localheinz\\Diff\\Parser' => __DIR__ . '/..' . '/localheinz/diff/src/Parser.php',
+        'Localheinz\\Diff\\TimeEfficientLongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/localheinz/diff/src/TimeEfficientLongestCommonSubsequenceCalculator.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit40a33afd2a14cb670fded278e623ffb4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit40a33afd2a14cb670fded278e623ffb4::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit40a33afd2a14cb670fded278e623ffb4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbffb7ae23f60453363c05a4c795362b4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbffb7ae23f60453363c05a4c795362b4::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbffb7ae23f60453363c05a4c795362b4::$classMap;
 
         }, null, ClassLoader::class);
     }

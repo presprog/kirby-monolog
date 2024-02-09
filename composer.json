@@ -1,8 +1,8 @@
 {
   "name": "presprog/kirby-monolog",
   "description": "Use the Monolog logger library with Kirby CMS",
-  "type": "kirby-plugin",
   "license": "MIT",
+  "type": "kirby-plugin",
   "authors": [
     {
       "name": "Benedict Massolle",
@@ -11,15 +11,19 @@
     }
   ],
   "require": {
-    "monolog/monolog": "^3.3",
-    "getkirby/composer-installer": "^1.2"
+    "getkirby/composer-installer": "^1.2",
+    "monolog/monolog": "^3.3"
   },
-  "extra": {
-    "installer-name": "monolog"
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.42"
   },
   "config": {
     "allow-plugins": {
+      "ergebnis/composer-normalize": true,
       "getkirby/composer-installer": true
     }
+  },
+  "extra": {
+    "installer-name": "monolog"
   }
 }

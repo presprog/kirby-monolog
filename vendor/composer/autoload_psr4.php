@@ -9,4 +9,11 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Kirby\\' => array($vendorDir . '/getkirby/composer-installer/src'),
+    'JsonSchema\\' => array($vendorDir . '/justinrainbow/json-schema/src/JsonSchema'),
+    'Ergebnis\\Json\\SchemaValidator\\' => array($vendorDir . '/ergebnis/json-schema-validator/src'),
+    'Ergebnis\\Json\\Printer\\' => array($vendorDir . '/ergebnis/json-printer/src'),
+    'Ergebnis\\Json\\Pointer\\' => array($vendorDir . '/ergebnis/json-pointer/src'),
+    'Ergebnis\\Json\\Normalizer\\' => array($vendorDir . '/ergebnis/json-normalizer/src'),
+    'Ergebnis\\Json\\' => array($vendorDir . '/ergebnis/json/src'),
+    'Ergebnis\\Composer\\Normalize\\' => array($vendorDir . '/ergebnis/composer-normalize/src'),
 );

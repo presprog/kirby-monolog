@@ -2,6 +2,8 @@
 
 This plugin adds the [Monolog logging library](https://github.com/Seldaek/monolog) to Kirby.
 
+> ⚡ Ready for Kirby 4!
+
 ## 🤟Usage
 
 Use the `monolog()` helper function:

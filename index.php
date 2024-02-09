@@ -38,16 +38,6 @@ App::plugin('presprog/monolog', [
     ],
 
     'siteMethods' => [
-        'log' => function (string $message, ?string $level = null, ?string $name = null, array $context = []): void {
-            $logger = monolog($name);
-
-            if (null === $level) {
-                $level = option('presprog.monolog.default.level');
-            }
-
-            $logger->log($level, $message, $context);
-        },
-
         'logException' => function (Throwable $exception, ?string $level = null, ?string $name = null) {
             $logger = monolog($name);
 

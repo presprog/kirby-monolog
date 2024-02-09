@@ -57,3 +57,7 @@ There are plenty of alternatives:
 * [johannschopplich/kirbylog](https://getkirby.com/plugins/johannschopplich/kirbylog) by Johann Schopplich (This one is dependency-free!)
 * [michnhokn/logger](https://getkirby.com/plugins/michnhokn/logger) by Michael Scheurich
 * [bvdputte/log](https://getkirby.com/plugins/bvdputte/log) by Bert Vandeputte
+
+----
+
+Made with ♥️ and ☕ by [Present Progressive](https://www.presentprogressive.de)

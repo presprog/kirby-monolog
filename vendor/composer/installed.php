@@ -3,7 +3,7 @@
         'name' => 'presprog/kirby-monolog',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c4f443189715c22d9190bdb5c152e69b7b8fab49',
+        'reference' => 'bba23b793ff1f64c9e276dab4ead3400455c933c',
         'type' => 'kirby-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -103,7 +103,7 @@
         'presprog/kirby-monolog' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c4f443189715c22d9190bdb5c152e69b7b8fab49',
+            'reference' => 'bba23b793ff1f64c9e276dab4ead3400455c933c',
             'type' => 'kirby-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

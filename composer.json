@@ -12,7 +12,8 @@
   ],
   "require": {
     "getkirby/composer-installer": "^1.2",
-    "monolog/monolog": "^3.3"
+    "monolog/monolog": "^3.3",
+    "psr/log": "^3.0"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.42"
